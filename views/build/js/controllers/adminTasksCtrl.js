@@ -15,7 +15,7 @@ AdminModule.controller("AdminTasksCtrl", function($scope, $http, $location){
     //console.log("hit query for data with user: ", current_user);
     $http({
         method: 'GET',
-        url: 'https://pgtest-app.herokuapp.com/admin_tasks'
+        url: '/admin_tasks'
       }).then(function successCallback(response) {
         self.tasksDetails = response.data;
         console.log("query for data returned with: ", self.tasksDetails);
