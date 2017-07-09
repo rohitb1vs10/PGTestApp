@@ -37,7 +37,7 @@ MainModule.config(function (ezfbProvider) {
 
 
 /////////////////////  Main Page Controller  //////////////////////
-MainModule.controller("MainCtrl", function($scope, $http, ezfb, currentUserService, loginStatusService){
+MainModule.controller("MainCtrl", function($scope, $http, $timeout, ezfb, currentUserService, loginStatusService){
 
   $scope.current_user = {
     user_name : "",
