@@ -19,6 +19,10 @@ AdminModule.controller("AdminCtrl", function($scope, $http, ezfb){
     user_name : "",
     user_id : ""
   }
+  $scope.logout = function () {
+    loginStatusService.logOut();
+    window.location.href='index.html';
+  };
 
   /*currentUserService.checkUserDetails($scope, function(){
   	$scope.current_user = currentUserService.getUserDetails();
