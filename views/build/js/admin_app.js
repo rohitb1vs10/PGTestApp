@@ -13,7 +13,7 @@ AdminModule.config(function (ezfbProvider) {
 
 
 /////////////////////  Main Page Controller  //////////////////////
-AdminModule.controller("AdminCtrl", function($scope, $http, ezfb){
+AdminModule.controller("AdminCtrl", function($scope, $http, $timeout, ezfb){
 
   $scope.current_user = {
     user_name : "",
@@ -21,7 +21,9 @@ AdminModule.controller("AdminCtrl", function($scope, $http, ezfb){
   }
   $scope.logout = function () {
     loginStatusService.logOut();
-    window.location.href='../index.html';
+    $timeout(function(){
+      window.location.href='../index.html';
+    }, 2000);
   };
 
   /*currentUserService.checkUserDetails($scope, function(){
