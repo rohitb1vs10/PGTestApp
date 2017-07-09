@@ -51,7 +51,7 @@ LoginModule.controller('LoginCtrl', function($scope, $http, ezfb, $window, $loca
   $scope.checkOrAddUser = function(){
     $http({
       method: 'POST',
-      url: 'http://localhost:3000/users',
+      url: 'https://pgtestapp.herokuapp.com:3000/users',
       data: $scope.user
     }).then(function successCallback(response) {
       console.log(response);
