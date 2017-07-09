@@ -13,7 +13,7 @@ MainModule.service("taskDataService", function($http, $rootScope, currentUserSer
 		//console.log("hit query for data with user: ", current_user);
 		$http({
 	      method: 'GET',
-	      url: 'https://pgtestapp.herokuapp.com:3000/tasks',
+	      url: 'https://pgtest-app.herokuapp.com/tasks',
 	      params: {
 	      		user_name:current_user.user_name,
 		      	user_id:current_user.user_id
@@ -31,7 +31,7 @@ MainModule.service("taskDataService", function($http, $rootScope, currentUserSer
 		//console.log("entered updateData with: ", task_details, " and count: ", count);
 		$http({
 	      method: 'PUT',
-	      url: 'https://pgtestapp.herokuapp.com:3000/tasks',
+	      url: 'https://pgtest-app.herokuapp.coms/tasks',
 	      data: {
 	      		user_name:current_user.user_name,
 		      	user_id:current_user.user_id,
@@ -50,7 +50,7 @@ MainModule.service("taskDataService", function($http, $rootScope, currentUserSer
 		console.log("entered addData with: ", task_details, " and user: ", current_user);
 		$http({
 	      method: 'POST',
-	      url: 'https://pgtestapp.herokuapp.com:3000/tasks',
+	      url: 'https://pgtest-app.herokuapp.com/tasks',
 	      data: {
 	      		user_name:current_user.user_name,
 		      	user_id:current_user.user_id,

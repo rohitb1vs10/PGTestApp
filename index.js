@@ -6,6 +6,8 @@ app.use(body_parser.json())
 
 app.set('port', (process.env.PORT || 8000));
 
+app.use(express.static('views'));
+
 //var distDir = _dirname + "/views/";
 //app.use(express.static(distDir));
 
