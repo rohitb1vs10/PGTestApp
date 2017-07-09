@@ -1,0 +1,24 @@
+<div class="animate form login_form">
+  <section class="login_content">
+  {{error_mssg}}</br>
+    <a href="/views/main.html">go</a>
+    <form name="loginForm" ng-submit="authenticateUser()" novalidate>
+      <h1>Login Form</h1>
+      <div>
+        <button class="btn btn-default submit" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Log In with Facebook</button> </br>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="separator">
+
+        <div class="clearfix"></div>
+        <br />
+
+        <div>
+          <h1><i class="fa fa-area-chart"></i> PeopleGrove</h1>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
