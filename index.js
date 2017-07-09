@@ -6,8 +6,8 @@ app.use(body_parser.json())
 
 app.set('port', (process.env.PORT || 8000));
 
-var distDir = _dirname + "/views/";
-app.use(express.static(distDir));
+//var distDir = _dirname + "/views/";
+//app.use(express.static(distDir));
 
 // Mongo DB //
 var MongoClient = require('mongodb').MongoClient;
