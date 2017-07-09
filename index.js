@@ -8,7 +8,8 @@ app.use(body_parser.json())
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
-var url = 'mongodb://localhost:27017/pgtest';
+//var url = 'mongodb://localhost:27017/pgtest';
+var url = 'mongodb://user:abcd1234@testcluster-shard-00-00-7f3ht.mongodb.net:27017,testcluster-shard-00-01-7f3ht.mongodb.net:27017,testcluster-shard-00-02-7f3ht.mongodb.net:27017/pgtest?ssl=true&replicaSet=TestCluster-shard-0&authSource=admin';
 
 
 // Mongo DB Get Data //
