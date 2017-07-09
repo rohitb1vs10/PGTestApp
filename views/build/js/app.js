@@ -46,7 +46,7 @@ MainModule.controller("MainCtrl", function($scope, $http, ezfb, currentUserServi
 
   $scope.logout = function () {
   	loginStatusService.logOut();
-  	window.location.href='index.html';
+  	window.location.href='../index.html';
   };
 
   currentUserService.checkUserDetails($scope, function(){

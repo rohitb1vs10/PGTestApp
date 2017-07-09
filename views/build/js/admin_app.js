@@ -21,7 +21,7 @@ AdminModule.controller("AdminCtrl", function($scope, $http, ezfb){
   }
   $scope.logout = function () {
     loginStatusService.logOut();
-    window.location.href='index.html';
+    window.location.href='../index.html';
   };
 
   /*currentUserService.checkUserDetails($scope, function(){
