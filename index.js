@@ -4,6 +4,11 @@ var body_parser = require('body-parser')
 var app = express()
 app.use(body_parser.json())
 
+app.set('port', (process.env.PORT || 8000));
+
+var distDir = _dirname + "/views/";
+app.use(express.static(distDir));
+
 // Mongo DB //
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
@@ -196,6 +201,6 @@ app.route('/admin_tasks')
         });
     })
 
-app.listen(3000, function(){
+app.listen(app.get('port'), function(){
 	console.log('listening on 3000');
 });
